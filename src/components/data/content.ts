@@ -9,7 +9,7 @@ export const personalInfo = {
   location: "South Africa",
   availability: "Open to opportunities",
   socialLinks: {
-    github: "https://github.com/TheLegendCoder",
+    github: "https://github.com/tsholofelondawonde",
     linkedin: "https://www.linkedin.com/in/ndawonde/",
     twitter: "https://x.com/tsholo_dev",
   },
