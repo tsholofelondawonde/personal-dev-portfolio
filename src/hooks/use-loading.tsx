@@ -6,7 +6,7 @@ interface UseLoadingReturn {
   isLoading: boolean;
   startLoading: () => void;
   stopLoading: () => void;
-  withLoading: (fn: () => Promise<any>) => Promise<any>;
+  withLoading: <T,>(fn: () => Promise<T>) => Promise<T>;
 }
 
 export function useLoading(initialState = false): UseLoadingReturn {
@@ -20,7 +20,7 @@ export function useLoading(initialState = false): UseLoadingReturn {
     setIsLoading(false);
   }, []);
 
-  const withLoading = useCallback(async (fn: () => Promise<any>) => {
+  const withLoading = useCallback(async <T,>(fn: () => Promise<T>) => {
     try {
       setIsLoading(true);
       const result = await fn();

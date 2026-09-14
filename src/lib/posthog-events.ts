@@ -7,7 +7,7 @@ import posthog from 'posthog-js';
  */
 export function trackEvent(
   eventName: string,
-  properties?: Record<string, any>
+  properties?: Record<string, unknown>
 ): void {
   if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
     posthog.capture(eventName, properties);
@@ -21,7 +21,7 @@ export function trackEvent(
  */
 export function trackPageView(
   pageName: string,
-  properties?: Record<string, any>
+  properties?: Record<string, unknown>
 ): void {
   trackEvent('Page View', {
     page_name: pageName,
@@ -36,7 +36,7 @@ export function trackPageView(
  */
 export function trackButtonClick(
   buttonName: string,
-  properties?: Record<string, any>
+  properties?: Record<string, unknown>
 ): void {
   trackEvent('Button Click', {
     button_name: buttonName,
@@ -51,7 +51,7 @@ export function trackButtonClick(
  */
 export function trackFormSubmission(
   formName: string,
-  properties?: Record<string, any>
+  properties?: Record<string, unknown>
 ): void {
   trackEvent('Form Submission', {
     form_name: formName,
@@ -66,7 +66,7 @@ export function trackFormSubmission(
  */
 export function identifyUser(
   userId: string,
-  userProperties?: Record<string, any>
+  userProperties?: Record<string, unknown>
 ): void {
   if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
     posthog.identify(userId, {
@@ -89,7 +89,7 @@ export function resetUserIdentification(): void {
  * Set user properties
  * @param properties - User properties to set
  */
-export function setUserProperties(properties: Record<string, any>): void {
+export function setUserProperties(properties: Record<string, unknown>): void {
   if (process.env.NEXT_PUBLIC_POSTHOG_KEY) {
     posthog.setPersonProperties(properties);
   }

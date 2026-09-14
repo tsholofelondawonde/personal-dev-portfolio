@@ -141,7 +141,7 @@ export function AdminTutorialRow({ tutorial }: AdminTutorialRowProps) {
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Delete "{tutorial.title}"?</AlertDialogTitle>
+                <AlertDialogTitle>Delete &quot;{tutorial.title}&quot;?</AlertDialogTitle>
                 <AlertDialogDescription>
                   This will permanently delete the tutorial. This action cannot be undone.
                 </AlertDialogDescription>

@@ -5,9 +5,9 @@ import { sanitizeUrl } from '../../src/lib/url-utils.js';
 test('sanitizeUrl', async (t) => {
   await t.test('returns empty string for empty input', () => {
     assert.strictEqual(sanitizeUrl(''), '');
-    // @ts-ignore
+    // @ts-expect-error testing runtime behavior for a disallowed input type
     assert.strictEqual(sanitizeUrl(null), '');
-    // @ts-ignore
+    // @ts-expect-error testing runtime behavior for a disallowed input type
     assert.strictEqual(sanitizeUrl(undefined), '');
   });
 
