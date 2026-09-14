@@ -207,7 +207,7 @@ export function TutorialEditor({ tutorial }: TutorialEditorProps) {
                 <AlertDialogHeader>
                   <AlertDialogTitle>Delete this tutorial?</AlertDialogTitle>
                   <AlertDialogDescription>
-                    This will permanently delete "{tutorial.title}". This cannot be undone.
+                    This will permanently delete &quot;{tutorial.title}&quot;. This cannot be undone.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter>
