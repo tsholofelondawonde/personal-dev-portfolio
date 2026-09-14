@@ -57,7 +57,7 @@ export default function ContactPage() {
 
           <section className="mt-16">
             <h2 className="mono-label mb-6 border-b border-border pb-3 text-foreground">
-              What I'm open to
+              What I&apos;m open to
             </h2>
             <ul className="flex flex-col gap-3">
               {OPEN_TO.map((item) => (

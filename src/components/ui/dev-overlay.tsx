@@ -25,7 +25,7 @@ export function DevOverlay({ open, onOpenChange }: DevOverlayProps) {
 
         <div className="space-y-6 py-4">
           <div className="space-y-2 text-sm text-muted-foreground">
-            <p>You found the secret dev panel! Here's what makes this site tick:</p>
+            <p>You found the secret dev panel! Here&apos;s what makes this site tick:</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4 text-sm">
@@ -56,7 +56,7 @@ export function DevOverlay({ open, onOpenChange }: DevOverlayProps) {
                 href={`mailto:${personalInfo.email}`}
                 className="text-primary hover:underline"
               >
-                Let's chat
+                Let&apos;s chat
               </a>
             </p>
           </div>
