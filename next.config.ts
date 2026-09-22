@@ -1,6 +1,14 @@
 import type { NextConfig } from 'next';
 import createMDX from '@next/mdx';
 
+// Supabase project hostnames this app actually talks to — kept in sync with
+// `images.remotePatterns` below rather than allow-listing all of *.supabase.co.
+const SUPABASE_API_HOST = 'https://hfazxdhdnozlgnxfowpy.supabase.co'; // auth/DB (NEXT_PUBLIC_SUPABASE_URL)
+const SUPABASE_STORAGE_HOSTS = [
+  'https://hfazxdhdnozlgnxfowpy.supabase.co',
+  'https://djfeucuujeenuvappydk.supabase.co', // referenced by legacy blog content images
+];
+
 // Content-Security-Policy, scoped to what this app actually loads:
 // Supabase (auth/storage), PostHog (analytics), optional Google Analytics,
 // next/font (self-hosted, same-origin). 'unsafe-inline' is required for
@@ -12,9 +20,9 @@ const contentSecurityPolicy = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://www.googletagmanager.com",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://images.unsplash.com https://placehold.co https://*.supabase.co",
+  `img-src 'self' data: blob: https://images.unsplash.com https://placehold.co ${SUPABASE_STORAGE_HOSTS.join(' ')}`,
   "font-src 'self' data:",
-  "connect-src 'self' https://*.supabase.co https://*.posthog.com https://www.google-analytics.com",
+  `connect-src 'self' ${SUPABASE_API_HOST} https://*.posthog.com https://www.google-analytics.com`,
   "worker-src 'self' blob:",
   "frame-src 'self'",
   "frame-ancestors 'self'",

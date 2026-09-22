@@ -41,6 +41,6 @@ describe('POST /api/admin/signout integration', () => {
     const body = await response.json();
 
     expect(response.status).toBe(500);
-    expect(body).toEqual({ error: 'Session not found' });
+    expect(body).toEqual({ error: 'Sign-out failed.' });
   });
 });

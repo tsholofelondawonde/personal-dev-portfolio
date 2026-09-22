@@ -22,6 +22,12 @@ export async function middleware(request: NextRequest) {
           );
         },
       },
+      // Pin Secure explicitly rather than relying on the library/platform default —
+      // http:// is only ever local dev, so Secure is safe everywhere else.
+      cookieOptions: {
+        sameSite: 'lax',
+        secure: process.env.NODE_ENV === 'production',
+      },
     }
   );
 
