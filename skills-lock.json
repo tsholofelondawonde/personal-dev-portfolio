@@ -17,7 +17,7 @@
       "source": "tsholofelondawonde/engineering-skills",
       "sourceType": "github",
       "skillPath": "skills/security/authorization/SKILL.md",
-      "computedHash": "d0c5795f6a81f118e473a42f1af62ddd2af40e0ae7e1a505f121c34b66e19986"
+      "computedHash": "683ae535f15710f84fe49fa4566656ae3732f496f510433e402ee7992303ea58"
     },
     "caching": {
       "source": "tsholofelondawonde/engineering-skills",
@@ -89,7 +89,7 @@
       "source": "tsholofelondawonde/engineering-skills",
       "sourceType": "github",
       "skillPath": "skills/security/rate-limiting/SKILL.md",
-      "computedHash": "f47224a69df74ed92492b543373ede7968f282281c9709748a60572b03db6c05"
+      "computedHash": "c7baa360aef528d265321e786fb8a74bfb4f11671624aa8d7962de01a789882d"
     },
     "readme-generator": {
       "source": "tsholofelondawonde/engineering-skills",
@@ -107,7 +107,7 @@
       "source": "tsholofelondawonde/engineering-skills",
       "sourceType": "github",
       "skillPath": "skills/security/secrets-management/SKILL.md",
-      "computedHash": "d77dda4f5e2677c4045c1c138b0bf2572d66e3b7207c1d14f692857bdd667c83"
+      "computedHash": "4033bc939c601ccb15999ada43e9511d9d2745aa52d6a9c32e944f6f31667d67"
     },
     "security-headers": {
       "source": "tsholofelondawonde/engineering-skills",
