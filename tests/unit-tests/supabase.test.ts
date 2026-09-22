@@ -53,4 +53,17 @@ describe('requireAuth()', () => {
 
     await expect(requireAuth()).rejects.toThrow('Unauthorized');
   });
+
+  it('rate-limits repeated calls for the same authenticated user', async () => {
+    vi.mocked(createClient).mockResolvedValue(
+      makeAuthClient({ id: 'rate-limit-user', email: 'user@example.com' }, null) as unknown as Awaited<ReturnType<typeof createClient>>
+    );
+
+    // Exhaust the per-user mutation rate limit bucket (30 calls/min).
+    for (let i = 0; i < 30; i++) {
+      await requireAuth();
+    }
+
+    await expect(requireAuth()).rejects.toThrow('Too many requests');
+  });
 });

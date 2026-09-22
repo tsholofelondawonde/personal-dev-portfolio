@@ -96,7 +96,8 @@ describe('supabase/client createClient()', () => {
     expect(client).toBeDefined();
     expect(vi.mocked(createBrowserClient)).toHaveBeenCalledWith(
       'https://test.supabase.co',
-      'anon-key-test'
+      'anon-key-test',
+      expect.objectContaining({ cookieOptions: expect.any(Object) })
     );
   });
 });
